@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useState } from "react";
+import { Router, Routes } from "react-router-dom";
+
+import Home from "./pages/Home";
+
+import { ThemeContext } from "./hooks/ThemeContext";
+import Theme from "./theme/Theme";
 
 function App() {
+  const themeContext = useContext(ThemeContext);
+  const [theme, setTheme] = useState(Theme);
+  const colors = theme.palette;
+  const spacing = theme.spacing;
+  const typography = theme.typography;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <themeContext.Provider
+        value={{
+          theme,
+          setTheme,
+          colors,
+          spacing,
+          typography,
+        }}
+      >
+        <Router path="/" element={<Home />}></Router>
+      </themeContext.Provider>
+    </Routes>
   );
 }
 
