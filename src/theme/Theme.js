@@ -18,7 +18,7 @@ const Theme = {
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "Inter, Roboto, sans-serif",
     h1: {
       fontSize: "2rem",
       fontWeight: 700,
