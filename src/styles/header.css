@@ -43,11 +43,3 @@
   text-decoration: none;
 }
 
-.header_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 50px;
-  border: none;
-}

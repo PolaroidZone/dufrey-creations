@@ -2,10 +2,13 @@ import { useContext } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
+import DefaultButton from "../buttons/DefaultButton";
+
 import "../../styles/header.css";
 
 const Header = () => {
-  const { colors, spacing, typography } = useContext(ThemeContext);
+  const { colors, typography } = useContext(ThemeContext);
+  const buttonLabel = "Learn More";
   return (
     <header
       className="header"
@@ -45,16 +48,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <button
-            className="header_button"
-            style={{
-              backgroundColor: colors.tertiary.main,
-              color: colors.secondary.main,
-              ...spacing.padding,
-            }}
-          >
-            Learn more
-          </button>
+          <DefaultButton text={buttonLabel} />
         </nav>
       </div>
     </header>
