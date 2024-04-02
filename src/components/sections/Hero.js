@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import DefaultButton from "../buttons/DefaultButton";
 
+import { ThemeContext } from "../../hooks/ThemeContext";
+
+import "../../styles/hero.css";
+
 export default function Hero() {
+  const { colors, typography } = useContext(ThemeContext);
+
   return (
     <section className="hero">
       <div className="container">
         <div className="hero_intro">
-          <h2>
+          <h2 style={{ color: colors.secondary.main }}>
             Discover the Best Sewing <br /> Machines for You
           </h2>
-          <h4>
+          <p style={{ color: colors.secondary.main }}>
             Explore our wide selection of high-quality sewing machines and
             services.
-          </h4>
+          </p>
           <DefaultButton text="Learn More" />
         </div>
         <div className="carausel">
