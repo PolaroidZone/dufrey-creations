@@ -16,22 +16,17 @@ const Header = () => {
           <h1
             style={{
               color: colors.primary.main,
-              ...typography.h1,
+              fontFamily: typography.fontFamily,
             }}
           >
-            Logo
+            Dufrey
           </h1>
         </div>
         <nav className="header_nav">
           <ul>
             <li>
               <a href="#" style={{ color: colors.primary.main }}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: colors.primary.main }}>
-                About
+                About Us
               </a>
             </li>
             <li>
@@ -44,10 +39,16 @@ const Header = () => {
                 Contact
               </a>
             </li>
+            <li>
+              <a href="#" style={{ color: colors.primary.main }}>
+                More
+              </a>
+            </li>
           </ul>
           <button
+            className="header_button"
             style={{
-              backgroundColor: colors.accent.main,
+              backgroundColor: colors.tertiary.main,
               color: colors.secondary.main,
               ...spacing.padding,
             }}
