@@ -12,7 +12,7 @@ export default function FeatureListSection() {
 
   const { featureListSection } = siteStrings;
   const featureList = featureListSection.list; //an objects array
-  const featureImage = images.index.features;
+  const featureListImage = images.index.featureList;
 
   return (
     <section
@@ -47,7 +47,7 @@ export default function FeatureListSection() {
         </div>
         <div className="box">
           <div className="featureListSection_image">
-            <img src={featureImage.src} alt={featureImage.alt} />
+            <img src={featureListImage.src} alt={featureListImage.alt} />
           </div>
         </div>
       </div>
