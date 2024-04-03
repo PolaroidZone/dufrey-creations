@@ -1,0 +1,30 @@
+.carousel {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top_carousel {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.bottom_carousel {
+  display: flex;
+  flex-direction: row;
+}
+
+.item_carousel {
+  height: 283;
+  width: 439;
+  margin-right: 2em;
+}
+
+.item_carousel img {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+}
