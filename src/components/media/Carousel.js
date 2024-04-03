@@ -24,11 +24,11 @@ export default function Carousel() {
         <div className="item_carousel">
           <img src="https://via.placeholder.com/150" alt="carausel" />
         </div>
-      </div>
-      <div className="bottom_carousel">
         <div className="item_carousel">
           <img src="https://via.placeholder.com/150" alt="carausel" />
         </div>
+      </div>
+      <div className="bottom_carousel">
         <div className="item_carousel">
           <img src="https://via.placeholder.com/150" alt="carausel" />
         </div>
