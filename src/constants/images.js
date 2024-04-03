@@ -13,6 +13,7 @@ import image11 from "../assets/images/11.jpg";
 import image12 from "../assets/images/12.jpg";
 
 import hero from "../assets/images/hero.png";
+import featuresImage from "../assets/images/featurePic-edit.png";
 
 export const images = {
   carousel1: [
@@ -30,6 +31,9 @@ export const images = {
     { id: 11, src: image11, alt: "image11" },
     { id: 12, src: image8, alt: "image8" },
   ],
-  main: { hero: hero },
+  index: {
+    hero: { src: hero, alt: "hero" },
+    features: { src: featuresImage, alt: "features" },
+  },
 };
 // Path: src/components/media/Carousel.js

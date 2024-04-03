@@ -20,24 +20,28 @@ const Theme = {
   typography: {
     fontFamily: "Inter, Roboto, sans-serif",
     h1: {
-      fontSize: "2rem",
+      fontSize: 48,
       fontWeight: 700,
     },
-    h2: {
-      fontSize: "1.5rem",
+    heading2: {
+      fontSize: 40,
       fontWeight: 700,
     },
-    h3: {
-      fontSize: "1.17rem",
+    heading3: {
+      fontSize: 36,
       fontWeight: 700,
     },
-    h4: {
-      fontSize: "1rem",
+    heading4: {
+      fontSize: 32,
       fontWeight: 700,
     },
-    h5: {
-      fontSize: ".83rem",
+    heading5: {
+      fontSize: 24,
       fontWeight: 700,
+    },
+    paragraph: {
+      fontSize: "20",
+      fontWeight: 400,
     },
   },
   spacing: {
