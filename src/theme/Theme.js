@@ -41,7 +41,7 @@ const Theme = {
     },
     paragraph: {
       fontSize: "20",
-      fontWeight: 400,
+      fontWeight: 300,
     },
   },
   spacing: {
