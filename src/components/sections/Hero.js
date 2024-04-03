@@ -7,7 +7,7 @@ import "../../styles/hero.css";
 import Carousel from "../media/Carousel";
 
 export default function Hero() {
-  const { colors, typography } = useContext(ThemeContext);
+  const { colors } = useContext(ThemeContext);
 
   return (
     <section className="hero">
