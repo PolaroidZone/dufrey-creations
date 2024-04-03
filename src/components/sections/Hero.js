@@ -4,6 +4,7 @@ import DefaultButton from "../buttons/DefaultButton";
 import { ThemeContext } from "../../hooks/ThemeContext";
 
 import "../../styles/hero.css";
+import Carousel from "../media/Carousel";
 
 export default function Hero() {
   const { colors, typography } = useContext(ThemeContext);
@@ -21,20 +22,7 @@ export default function Hero() {
           </p>
           <DefaultButton text="Learn More" />
         </div>
-        <div className="carausel">
-          <div className="carausel_item">
-            <img src="https://via.placeholder.com/150" alt="placeholder" />
-          </div>
-          <div className="carausel_item">
-            <img src="https://via.placeholder.com/150" alt="placeholder" />
-          </div>
-          <div className="carausel_item">
-            <img src="https://via.placeholder.com/150" alt="placeholder" />
-          </div>
-          <div className="carausel_item">
-            <img src="https://via.placeholder.com/150" alt="placeholder" />
-          </div>
-        </div>
+        <Carousel />
       </div>
     </section>
   );
