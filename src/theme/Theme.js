@@ -37,7 +37,7 @@ const Theme = {
     },
     heading5: {
       fontSize: 24,
-      fontWeight: 700,
+      fontWeight: 300,
     },
     paragraph: {
       fontSize: "20",

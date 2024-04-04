@@ -15,6 +15,7 @@ import image12 from "../assets/images/12.jpg";
 import hero from "../assets/images/hero.png";
 import featuresImage from "../assets/images/featurePic-edit.png";
 import featureLisImage from "../assets/images/featureList-pic.png";
+import benefitsImage from "../assets/images/benefits-pic.png";
 
 export const images = {
   carousel1: [
@@ -36,6 +37,7 @@ export const images = {
     hero: { src: hero, alt: "hero" },
     features: { src: featuresImage, alt: "features image" },
     featureList: { src: featureLisImage, alt: "featureList image" },
+    benefits: { src: benefitsImage, alt: "benefits image" },
   },
 };
 // Path: src/components/media/Carousel.js
