@@ -33,6 +33,7 @@ export default function FeatureSection() {
                   color: colors.primary.main,
                   fontSize: paragraph.fontSize,
                   fontWeight: paragraph.fontWeight,
+                  textAlign: "left",
                 }}
               >
                 {featureSection.paragraph}
@@ -59,6 +60,7 @@ export default function FeatureSection() {
                           color: colors.primary.main,
                           fontSize: paragraph.fontSize,
                           fontWeight: paragraph.fontWeight,
+                          textAlign: "left",
                         }}
                       >
                         {feature.paragraph}
