@@ -2,11 +2,15 @@ import React, { useContext } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
-import { statsSection } from "../../assets/data/siteStrings.json";
+import siteStrings from "../../assets/data/siteStrings.json";
+
+import "../../styles/statssection.css";
 
 export default function StatsSection() {
   const { colors, typography } = useContext(ThemeContext);
   const { heading2, paragraph } = typography;
+
+  const { statsSection } = siteStrings;
 
   const { title, details, list } = statsSection;
 
@@ -43,7 +47,7 @@ export default function StatsSection() {
               </p>
             </div>
             <div className="stats_list">
-              <ul>
+              <ul className="stats">
                 {list.map((item, index) => (
                   <li key={index}>
                     <div>
