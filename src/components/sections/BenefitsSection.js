@@ -45,6 +45,7 @@ export default function BenefitsSection() {
               style={{
                 color: colors.primary.main,
                 fontSize: paragraph.fontSize,
+                textAlign: "left"
               }}
             >
               {benefitsSection.paragraph}
