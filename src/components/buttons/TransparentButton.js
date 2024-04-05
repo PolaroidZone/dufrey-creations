@@ -4,7 +4,7 @@ import { ThemeContext } from "../../hooks/ThemeContext";
 
 import "../../styles/Buttons/buttonStyles.css";
 
-export default function ({ text }) {
+export default function ({ text, color }) {
   const { colors } = useContext(ThemeContext);
 
   return (
@@ -12,7 +12,7 @@ export default function ({ text }) {
       className="transparent_button"
       style={{
         backgroundColor: "transparent",
-        color: colors.primary.main,
+        color: color ? color : colors.primary.main,
       }}
     >
       {text ? text : "Button"}
