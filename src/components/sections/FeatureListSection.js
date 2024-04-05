@@ -37,6 +37,7 @@ export default function FeatureListSection() {
                     color: colors.secondary.main,
                     fontSize: paragraph.fontSize,
                     fontWeight: paragraph.fontWeight,
+                    textAlign: "left",
                   }}
                 >
                   {feature.paragraph}
