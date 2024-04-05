@@ -5,6 +5,7 @@ import Hero from "../components/sections/Hero";
 import FeatureSection from "../components/sections/FeatureSection";
 import FeatureListSection from "../components/sections/FeatureListSection";
 import BenefitsSection from "../components/sections/BenefitsSection";
+import ServiceSection from "../components/sections/ServiceSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <FeatureSection />
       <FeatureListSection />
       <BenefitsSection />
+      <ServiceSection />
     </>
   );
 };
