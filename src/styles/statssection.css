@@ -1,0 +1,63 @@
+.stats_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  flex: 1;
+  width: 100%;
+  padding-top: 5.5em;
+  padding-bottom: 5.5em;
+}
+
+.stats_container {
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.stats_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  transition: 0.3s;
+  width: 700px;
+}
+
+.stats_content {
+  transition: 0.3s;
+  list-style: none;
+  width: 100%;
+}
+
+.stats_deatails {
+  width: 100%;  
+  margin-bottom: 3em;
+}
+
+.stats_deatails p {
+  text-align: left;
+}
+
+.stats_list {
+  width: 100%;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  display: flex;
+}
+
+.stats li {
+  text-align: left;
+}
+
+.stats p {
+  text-align: left;
+}
