@@ -7,6 +7,7 @@ import { images } from "../../constants/images";
 
 import "../../styles/benefits.css";
 import DefaultButton from "../buttons/DefaultButton";
+import TransparentButton from "../buttons/TransparentButton";
 
 export default function BenefitsSection() {
   const { colors, typography } = useContext(ThemeContext);
@@ -51,6 +52,7 @@ export default function BenefitsSection() {
           </div>
           <div className="benefits_cta">
             <DefaultButton text={"Learn More"} />
+            <TransparentButton text={"Contact Us " + ">"} />
           </div>
         </div>
         <div className="benefits_box">
