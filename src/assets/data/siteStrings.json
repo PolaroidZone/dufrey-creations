@@ -82,13 +82,13 @@
   ],
   "ctaSection": {
     "title": "Discover Our Quality Sewing Machines",
-    "paragraph": "Browse our wide selection of high-performance sewing machines and accessories..",
+    "details": "Browse our wide selection of high-performance sewing machines and accessories..",
     "contact": "Contact",
     "learnMore": "Learn More"
   },
   "newsLetter": {
     "title": "Stay Updated with Our Newsletter",
-    "paragraph": "Subscribe to our newsletter for the latest sewing machine models and tips.",
+    "details": "Subscribe to our newsletter for the latest sewing machine models and tips.",
     "email": "your email address",
     "subscribe": "Join Now",
     "privacy": "By joining, you agree to our Terms and Conditions."
@@ -96,7 +96,7 @@
   "contactInfo": {
     "emphases": "Quality",
     "title": "Experience the Best in Sewing Machine Services",
-    "paragraph": "Browse our wide selection of high-performance sewing machines and accessories..",
+    "details": "Browse our wide selection of high-performance sewing machines and accessories..",
     "address": {
       "title": "Office",
       "street": "1234 Elm St.",
