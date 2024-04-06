@@ -30,6 +30,7 @@ const DefaultButton = ({ text, size }) => {
         backgroundColor: colors.tertiary.main,
         color: colors.secondary.main,
         height: buttonSize(size),
+        width: size === "small" ? 100 : 200,
       }}
     >
       {text ? text : "Default"}

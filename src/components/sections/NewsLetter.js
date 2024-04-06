@@ -24,6 +24,7 @@ export default function NewsLetter() {
               color: colors.secondary.main,
               textAlign: "center",
               maxWidth: 450,
+              marginBottom: ".8em",
             }}
           >
             {newsLetterStrings.title}
