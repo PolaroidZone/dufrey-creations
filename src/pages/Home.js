@@ -9,6 +9,7 @@ import ServiceSection from "../components/sections/ServiceSection";
 import StatsSection from "../components/sections/StatsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import CTASection from "../components/sections/CTASection";
+import NewsLetter from "../components/sections/NewsLetter";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <StatsSection />
       <TestimonialSection />
       <CTASection />
+      <NewsLetter />
     </>
   );
 };
