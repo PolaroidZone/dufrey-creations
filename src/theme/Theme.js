@@ -22,26 +22,32 @@ const Theme = {
     h1: {
       fontSize: 48,
       fontWeight: 700,
+      fontWeightMedium: 400,
     },
     heading2: {
       fontSize: 40,
       fontWeight: 700,
+      fontWeightMedium: 400,
     },
     heading3: {
       fontSize: 36,
       fontWeight: 700,
+      fontWeightMedium: 400,
     },
     heading4: {
       fontSize: 32,
       fontWeight: 700,
+      fontWeightMedium: 400,
     },
     heading5: {
       fontSize: 24,
       fontWeight: 300,
+      fontWeightMedium: 400,
     },
     paragraph: {
       fontSize: "20",
       fontWeight: 300,
+      fontWeightMedium: 400,
     },
   },
   spacing: {
