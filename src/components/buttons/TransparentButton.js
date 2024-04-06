@@ -4,7 +4,7 @@ import { ThemeContext } from "../../hooks/ThemeContext";
 
 import "../../styles/Buttons/buttonStyles.css";
 
-export default function ({ text, color }) {
+export default function ({ text, color, isBorder }) {
   const { colors } = useContext(ThemeContext);
 
   return (
@@ -13,6 +13,7 @@ export default function ({ text, color }) {
       style={{
         backgroundColor: "transparent",
         color: color ? color : colors.primary.main,
+        border: isBorder ? `1px solid ${colors.primary.main}` : "none",
       }}
     >
       {text ? text : "Button"}
