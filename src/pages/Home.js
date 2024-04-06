@@ -8,6 +8,7 @@ import BenefitsSection from "../components/sections/BenefitsSection";
 import ServiceSection from "../components/sections/ServiceSection";
 import StatsSection from "../components/sections/StatsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
+import CTASection from "../components/sections/CTASection";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <ServiceSection />
       <StatsSection />
       <TestimonialSection />
+      <CTASection />
     </>
   );
 };
