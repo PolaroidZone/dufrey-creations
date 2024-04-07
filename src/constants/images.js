@@ -21,6 +21,8 @@ import newsLetterBg from "../assets/images/news_letter_image.png";
 import email from "../assets/images/Envelopeemail.png";
 import phone from "../assets/images/phone-altphone.png";
 import location from "../assets/images/Locationpin.png";
+import fb from "../assets/images/FacebookIcon.png";
+import linkedIn from "../assets/images/LinkedInIcon.png";
 
 export const images = {
   carousel1: [
@@ -49,6 +51,7 @@ export const images = {
     emailIcon: { src: email, alt: "email icon" },
     phoneIcon: { src: phone, alt: "phone icon" },
     locationIcon: { src: location, alt: "location icon" },
+    facebookIcon: { src: fb, alt: "facebook icon" },
+    linkedInIcon: { src: linkedIn, alt: "linkedIn icon" },
   },
 };
-// Path: src/components/media/Carousel.js

@@ -115,19 +115,44 @@
     }
   },
   "footer": {
+    "navItems": [
+      {
+        "title": "About Us",
+        "link": "#"
+      },
+      {
+        "title": "Services",
+        "link": "#"
+      },
+      {
+        "title": "Contact",
+        "link": "#"
+      },
+      {
+        "title": "FAQs",
+        "link": "#"
+      }
+    ],
+    "T&C": [
+      {
+        "title": "Privacy Policy",
+        "link": "#"
+      },
+      {
+        "title": "Terms and Conditions",
+        "link": "#"
+      },
+      {
+        "title": "Cookies Policy",
+        "link": "#"
+      }
+    ],
     "logo": "Duffrey",
-    "about": "About Us",
-    "services": "Services",
-    "contact": "Contact",
     "faqs": "FAQs",
-    "privacy": "Privacy Policy",
-    "terms": "Terms and Conditions",
-    "cookies": "Cookies Policy",
     "copyRight": "© 2021 DuffreyCreations. All rights reserved.",
     "social": {
       "facebook": "https://www.facebook.com/",
-      "twitter": "https://twitter.com/",
-      "instagram": "https://www.instagram.com/"
+      "linkedin": "https://www.linkedin.com/"
     }
   }
 }

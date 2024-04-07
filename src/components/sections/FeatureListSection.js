@@ -8,7 +8,7 @@ import "../../styles/featureListSection.css";
 
 export default function FeatureListSection() {
   const { colors, typography } = useContext(ThemeContext);
-  const { heading2, heading3, heading5, paragraph } = typography;
+  const { heading3, paragraph } = typography;
 
   const { featureListSection } = siteStrings;
   const featureList = featureListSection.list; //an objects array

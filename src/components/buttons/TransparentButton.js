@@ -4,7 +4,7 @@ import { ThemeContext } from "../../hooks/ThemeContext";
 
 import "../../styles/Buttons/buttonStyles.css";
 
-export default function ({ text, color, isBorder }) {
+export default function TransparentButton({ text, color, isBorder }) {
   const { colors } = useContext(ThemeContext);
 
   return (

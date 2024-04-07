@@ -3,7 +3,6 @@ import DefaultButton from "../buttons/DefaultButton";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 import sitestrings from "../../assets/data/siteStrings.json";
-import { images } from "../../constants/images";
 
 import "../../styles/newLetter.css";
 
