@@ -3,18 +3,38 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../hooks/ThemeContext";
 
 import siteStrings from "../../assets/data/siteStrings.json";
+import { images } from "../../constants/images";
 
 import "../../styles/contactStyles.css";
+import HomeMap from "../maps/HomeMap";
 
 export default function ContactSection() {
   const { colors, typography } = useContext(ThemeContext);
 
-  const { heading2, heading5, paragraph } = typography;
+  const { heading2, heading5, heading4, paragraph } = typography;
 
   const contactInfo = siteStrings.contactInfo;
 
+  const { address, phone, email } = contactInfo;
+
+  const { locationIcon, phoneIcon, emailIcon } = images.icons;
+
+  const contactList = [
+    { id: 1, icon: emailIcon, title: email.title, details: email.address },
+    { id: 2, icon: phoneIcon, title: phone.title, details: phone.number },
+    {
+      id: 3,
+      icon: locationIcon,
+      title: address.title,
+      details: address.city + ", " + address.street,
+    },
+  ];
+
   return (
-    <section className="contact_section">
+    <section
+      className="contact_section"
+      style={{ backgroundColor: colors.primaryLight.main }}
+    >
       <div className="contact_container">
         <div className="contact_info">
           <div className="contact_content">
@@ -47,49 +67,33 @@ export default function ContactSection() {
               {contactInfo.details}
             </p>
           </div>
-          <div className="contact_information"></div>
+          <div className="contact_information">
+            <ul className="contact_list">
+              {contactList.map((contact, index) => (
+                <li key={index}>
+                  <div>
+                    <img className="contact_icon" src={contact.icon.src} />
+                  </div>
+                  <div>
+                    <h4
+                      style={{
+                        color: colors.primary.main,
+                        fontSize: heading4.fontSize,
+                        fontWeight: heading4.fontWeight,
+                        marginBottom: 0,
+                      }}
+                    >
+                      {contact.title}
+                    </h4>
+                    <p>{contact.details}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="contact_map">
-          <div
-            style={{
-              maxWidth: "100%",
-              listStyle: "none",
-              transition: "none",
-              overflow: "hidden",
-              width: "1528px",
-              height: "941px",
-            }}
-          >
-            <div
-              id="my-map-display"
-              style={{
-                height: "100%",
-                width: "100%",
-                maxWidth: "100%",
-              }}
-            >
-              <iframe
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  border: "0",
-                }}
-                frameBorder="0"
-                src="https://www.google.com/maps/embed/v1/place?q=Francistown,+Botswana&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                title="Map"
-              ></iframe>
-            </div>
-            <a
-              className="google-map-code-enabler"
-              href="https://www.bootstrapskins.com/themes"
-              id="get-data-for-map"
-            >
-              premium bootstrap themes
-            </a>
-            <style>
-              {`#my-map-display img{max-height:none;max-width:none!important;background:none!important;}`}
-            </style>
-          </div>
+          <HomeMap />
         </div>
       </div>
     </section>

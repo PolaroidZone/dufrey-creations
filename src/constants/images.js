@@ -18,6 +18,10 @@ import featureLisImage from "../assets/images/featureList-pic.png";
 import benefitsImage from "../assets/images/benefits-pic.png";
 import newsLetterBg from "../assets/images/news_letter_image.png";
 
+import email from "../assets/images/Envelopeemail.png";
+import phone from "../assets/images/phone-altphone.png";
+import location from "../assets/images/Locationpin.png";
+
 export const images = {
   carousel1: [
     { id: 1, src: image7, alt: "image7" },
@@ -40,6 +44,11 @@ export const images = {
     featureList: { src: featureLisImage, alt: "featureList image" },
     benefits: { src: benefitsImage, alt: "benefits image" },
     newsLetterBg: { src: newsLetterBg, alt: "News letter backgroun" },
+  },
+  icons: {
+    emailIcon: { src: email, alt: "email icon" },
+    phoneIcon: { src: phone, alt: "phone icon" },
+    locationIcon: { src: location, alt: "location icon" },
   },
 };
 // Path: src/components/media/Carousel.js
