@@ -10,6 +10,7 @@ import StatsSection from "../components/sections/StatsSection";
 import TestimonialSection from "../components/sections/TestimonialSection";
 import CTASection from "../components/sections/CTASection";
 import NewsLetter from "../components/sections/NewsLetter";
+import ContactSection from "../components/sections/ContactSection";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <TestimonialSection />
       <CTASection />
       <NewsLetter />
+      <ContactSection />
     </>
   );
 };
