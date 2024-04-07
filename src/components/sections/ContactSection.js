@@ -72,7 +72,11 @@ export default function ContactSection() {
               {contactList.map((contact, index) => (
                 <li key={index}>
                   <div>
-                    <img className="contact_icon" src={contact.icon.src} />
+                    <img
+                      className="contact_icon"
+                      src={contact.icon.src}
+                      alt={contact.icon.alt}
+                    />
                   </div>
                   <div>
                     <h4

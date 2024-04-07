@@ -45,7 +45,7 @@ export default function BenefitsSection() {
               style={{
                 color: colors.primary.main,
                 fontSize: paragraph.fontSize,
-                textAlign: "left"
+                textAlign: "left",
               }}
             >
               {benefitsSection.paragraph}
@@ -53,7 +53,7 @@ export default function BenefitsSection() {
           </div>
           <div className="benefits_cta">
             <DefaultButton text={"Learn More"} />
-            <TransparentButton text={"Contact Us " + ">"} />
+            <TransparentButton text={"Contact Us >"} />
           </div>
         </div>
         <div className="benefits_box">
