@@ -10,7 +10,7 @@ import "../../styles/footer.css";
 export default function Footer() {
   const { colors, typography } = useContext(ThemeContext);
 
-  const { heading1, heading2, heading3, paragraph } = typography;
+  const { paragraph } = typography;
 
   const { footer } = siteSrtings;
 

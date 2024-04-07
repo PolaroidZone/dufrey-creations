@@ -8,7 +8,7 @@ import "../../styles/featureSection.css";
 
 export default function FeatureSection() {
   const { colors, typography } = useContext(ThemeContext);
-  const { heading2, heading3, heading5, paragraph } = typography;
+  const { heading2, heading3, paragraph } = typography;
 
   const { featureSection } = siteStrings;
   const featureList = featureSection.list; //an objects array
