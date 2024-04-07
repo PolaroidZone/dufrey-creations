@@ -2,15 +2,53 @@ import React, { useContext } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
+import siteStrings from "../../assets/data/siteStrings.json";
+
 import "../../styles/contactStyles.css";
 
 export default function ContactSection() {
   const { colors, typography } = useContext(ThemeContext);
 
+  const { heading2, heading5, paragraph } = typography;
+
+  const contactInfo = siteStrings.contactInfo;
+
   return (
     <section className="contact_section">
       <div className="contact_container">
-        <div className="contact_info"></div>
+        <div className="contact_info">
+          <div className="contact_content">
+            <h5
+              style={{
+                color: colors.primary.main,
+                fontSize: heading5.fontSize,
+                fontWeight: heading5.fontWeight,
+                marginBottom: ".5em",
+              }}
+            >
+              {contactInfo.emphases}
+            </h5>
+            <h2
+              style={{
+                color: colors.primary.main,
+                fontSize: heading2.fontSize,
+                marginBottom: ".6em",
+              }}
+            >
+              {contactInfo.title}
+            </h2>
+            <p
+              style={{
+                color: colors.primary.main,
+                fontSize: paragraph.fontSize,
+                textAlign: "left",
+              }}
+            >
+              {contactInfo.details}
+            </p>
+          </div>
+          <div className="contact_information"></div>
+        </div>
         <div className="contact_map">
           <div
             style={{
