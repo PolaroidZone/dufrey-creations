@@ -11,6 +11,7 @@ import TestimonialSection from "../components/sections/TestimonialSection";
 import CTASection from "../components/sections/CTASection";
 import NewsLetter from "../components/sections/NewsLetter";
 import ContactSection from "../components/sections/ContactSection";
+import Footer from "../components/sections/Footer";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <CTASection />
       <NewsLetter />
       <ContactSection />
+      <Footer />
     </>
   );
 };
