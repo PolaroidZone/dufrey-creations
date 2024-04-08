@@ -9,6 +9,7 @@ function App() {
   const colors = theme.palette;
   const spacing = theme.spacing;
   const typography = theme.typography;
+  const breakpoints = theme.breakpoints;
 
   return (
     <ThemeContext.Provider
@@ -18,6 +19,7 @@ function App() {
         colors,
         spacing,
         typography,
+        breakpoints,
       }}
     >
       <Router>
