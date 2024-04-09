@@ -2,13 +2,8 @@ import React, { useContext, useState } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
-export default function Burger() {
+export default function Burger({ isOpen, setIsOpen }) {
   const { colors } = useContext(ThemeContext);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
 
   const line1Style = {
     backgroundColor: colors.primary.main,
@@ -45,7 +40,7 @@ export default function Burger() {
 
   return (
     <div
-      onClick={handleClick}
+      onClick={() => setIsOpen()}
       style={{
         width: "30px",
         height: "30px",
