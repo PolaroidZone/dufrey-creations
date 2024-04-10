@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import siteStrings from "../../assets/data/siteStrings.json";
 import { ThemeContext } from "../../hooks/ThemeContext";
@@ -7,11 +7,25 @@ import TransparentButton from "../buttons/TransparentButton";
 import "../../styles/service.css";
 
 export default function ServiceSection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
   const { heading2, heading5, paragraph } = typography;
 
   const serviceSection = siteStrings.servicesSection;
   const { title, list } = serviceSection;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section
@@ -22,7 +36,7 @@ export default function ServiceSection() {
         <div className="service_title">
           <h2
             style={{
-              fontSize: heading2.fontSize,
+              fontSize: !isMobile ? heading2.fontSize : 30,
               fontWeight: heading2.fontWeight,
               color: colors.secondary.main,
               textAlign: "center",
@@ -42,7 +56,7 @@ export default function ServiceSection() {
                 </div>
                 <h5
                   style={{
-                    fontSize: heading5.fontSize,
+                    fontSize: !isMobile ? heading5.fontSize : 20,
                     fontWeight: "bold",
                     color: colors.secondary.main,
                     marginBottom: "1em",
@@ -52,10 +66,11 @@ export default function ServiceSection() {
                 </h5>
                 <p
                   style={{
-                    fontSize: paragraph.fontSize,
+                    fontSize: !isMobile ? paragraph.fontSize : 15,
                     color: colors.secondary.main,
                     fontWeight: paragraph.fontWeight,
                     marginBottom: "2em",
+                    textAlign: "center"
                   }}
                 >
                   {list.paragraph}

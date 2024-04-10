@@ -8,6 +8,7 @@
   width: 100%;
   padding-top: 5.5em;
   padding-bottom: 5.5em;
+  overflow: hidden;
 }
 
 .contact_container {
@@ -18,7 +19,6 @@
   flex-direction: column;
   width: 100%;
   max-width: 1800px;
-  padding: 0 20px;
 }
 
 .contact_info {
@@ -34,11 +34,18 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  width: 640px;
+  width: 50%;
+}
+
+.contact_information {
+  width: 50%;
 }
 
 .contact_list {
-  width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
 }
 
 .contact_list li {
@@ -58,4 +65,38 @@
 
 .contact_map {
   width: 100%;
+}
+
+@media screen and (max-width: 1550px) {
+  .contact_info {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact_info {
+    flex-direction: column;
+  }
+
+  .contact_information {
+    width: 100%;
+  }
+
+  .contact_list {
+    padding-left: 0;
+  }
+
+  
+.contact_content {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact_information {
+  width: 100%;
+  margin-top: 3em;
+}
 }

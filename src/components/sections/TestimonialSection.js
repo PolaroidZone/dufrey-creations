@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 import siteStrings from "../../assets/data/siteStrings.json";
@@ -6,10 +6,24 @@ import siteStrings from "../../assets/data/siteStrings.json";
 import "../../styles/testimonial.css";
 
 export default function TestimonialSection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
   const { heading3, heading5, paragraph } = typography;
 
   const testimonial = siteStrings.testimonialSection;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section
@@ -22,7 +36,7 @@ export default function TestimonialSection() {
             <div key={index} className="testimonial_content">
               <h3
                 style={{
-                  fontSize: heading3.fontSize,
+                  fontSize: !isMobile ? heading3.fontSize : 20,
                   fontWeight: heading3.fontWeightMedium,
                 }}
               >

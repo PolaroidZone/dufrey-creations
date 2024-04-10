@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import siteStrings from "../../assets/data/siteStrings.json";
 
@@ -10,12 +10,26 @@ import DefaultButton from "../buttons/DefaultButton";
 import TransparentButton from "../buttons/TransparentButton";
 
 export default function BenefitsSection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
 
   const { heading2, heading5, paragraph } = typography;
 
   const { benefitsSection } = siteStrings;
   const { benefits } = images.index;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="benefits_section" style={{ color: colors.accent }}>
@@ -35,7 +49,7 @@ export default function BenefitsSection() {
             <h2
               style={{
                 color: colors.primary.main,
-                fontSize: heading2.fontSize,
+                fontSize: !isMobile ? heading2.fontSize : 30,
                 marginBottom: ".6em",
               }}
             >
@@ -44,7 +58,7 @@ export default function BenefitsSection() {
             <p
               style={{
                 color: colors.primary.main,
-                fontSize: paragraph.fontSize,
+                fontSize: !isMobile ? paragraph.fontSize : 15,
                 textAlign: "left",
               }}
             >

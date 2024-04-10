@@ -12,6 +12,7 @@
   background-image: url("../assets/images/news_letter_image.png");
   background-position: center;
   background-size: cover;
+  overflow-y: hidden;
 
 }
 
@@ -22,7 +23,6 @@
   flex-direction: column;
   width: 100%;
   max-width: 1800px;
-  padding: 0 20px;
 }
 
 .news_letter_top {
@@ -33,13 +33,13 @@
 }
 
 .news_letter_form_container {
-  width: 700px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
 }
 
 .news_letter_form {
-  width: 700px;
+  max-width: 700px;
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
@@ -47,8 +47,19 @@
 
 .news_letter_form input {
   width: 308px;
+  max-width: 308px;
   height: 40px;
   padding-left: 10px;
   margin-right: 10px;
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .news_letter_form input {
+    max-width: 225px;
+    margin-bottom: 1em;
+    transition: ease-in-out 0.5s;
+  }
+  
 }

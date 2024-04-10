@@ -21,7 +21,7 @@
 }
 
 .testimonial_content {
-  width: 1146px;
+  max-width: 1146px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,4 +48,13 @@
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: 2em;
+}
+
+@media screen and (max-width: 1550px) {
+  .testimonial_container {
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

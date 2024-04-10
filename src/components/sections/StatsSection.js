@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
@@ -7,12 +7,26 @@ import siteStrings from "../../assets/data/siteStrings.json";
 import "../../styles/statssection.css";
 
 export default function StatsSection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
-  const { heading2, paragraph } = typography;
+  const { heading2, heading3, paragraph } = typography;
 
   const { statsSection } = siteStrings;
 
   const { title, details, list } = statsSection;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section
@@ -24,7 +38,7 @@ export default function StatsSection() {
           <div className="title_container">
             <h2
               style={{
-                fontSize: heading2.fontSize,
+                fontSize: !isMobile ? heading2.fontSize : 30,
                 fontWeight: heading2.fontWeight,
                 color: colors.primary.main,
               }}
@@ -38,7 +52,7 @@ export default function StatsSection() {
             <div className="stats_deatails">
               <p
                 style={{
-                  fontSize: paragraph.fontSize,
+                  fontSize: !isMobile ? paragraph.fontSize : 15,
                   fontWeight: paragraph.fontWeight,
                   color: colors.primary.main,
                 }}
@@ -53,7 +67,7 @@ export default function StatsSection() {
                     <div>
                       <h3
                         style={{
-                          fontSize: heading2.fontSize,
+                          fontSize: !isMobile ? heading3.fontSize : 20,
                           fontWeight: heading2.fontWeight,
                           color: colors.primary.main,
                         }}
@@ -63,7 +77,7 @@ export default function StatsSection() {
                       <p
                         style={{
                           fontSize: paragraph.fontSize,
-                          fontWeight: paragraph.fontWeight,
+                          fontSize: !isMobile ? paragraph.fontSize : 15,
                           color: colors.primary.main,
                         }}
                       >

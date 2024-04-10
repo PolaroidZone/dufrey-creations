@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import siteStrings from "../../assets/data/siteStrings.json";
 import { images } from "../../constants/images";
@@ -7,12 +7,26 @@ import { ThemeContext } from "../../hooks/ThemeContext";
 import "../../styles/featureSection.css";
 
 export default function FeatureSection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
   const { heading2, heading3, paragraph } = typography;
 
   const { featureSection } = siteStrings;
   const featureList = featureSection.list; //an objects array
   const featureImage = images.index.features;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="feature_section">
@@ -21,9 +35,10 @@ export default function FeatureSection() {
           <div className="content__container">
             <div className="container_top">
               <h2
+                className="feature__title"
                 style={{
                   color: colors.primary.main,
-                  fontSize: heading2.fontSize,
+                  fontSize: !isMobile ? heading2.fontSize : 30,
                 }}
               >
                 {featureSection.title}
@@ -31,7 +46,7 @@ export default function FeatureSection() {
               <p
                 style={{
                   color: colors.primary.main,
-                  fontSize: paragraph.fontSize,
+                  fontSize: !isMobile ? paragraph.fontSize : 15,
                   fontWeight: paragraph.fontWeight,
                   textAlign: "left",
                 }}
@@ -50,7 +65,7 @@ export default function FeatureSection() {
                       <h3
                         style={{
                           color: colors.primary.main,
-                          fontSize: heading3.fontSize,
+                          fontSize: !isMobile ? heading3.fontSize : 20,
                         }}
                       >
                         {feature.title}
@@ -58,7 +73,7 @@ export default function FeatureSection() {
                       <p
                         style={{
                           color: colors.primary.main,
-                          fontSize: paragraph.fontSize,
+                          fontSize: !isMobile ? paragraph.fontSize : 15,
                           fontWeight: paragraph.fontWeight,
                           textAlign: "left",
                         }}

@@ -5,6 +5,7 @@
   border-bottom: 1px solid #e0e0e0;
   background-color: rgb(47, 73, 73);
   height: 100px;
+  transition: all 0.5s;
 }
 
 .header_logo {
@@ -43,3 +44,27 @@
   text-decoration: none;
 }
 
+.header_burger {
+  display: none;
+}
+
+/*Responsiveness*/
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 80px;
+  }
+  .header_container {
+    padding: 0 10px;
+
+    justify-content: space-between;
+  }
+  .header_nav {
+    position: absolute;
+    display: none;
+  }
+
+  .header_burger {
+    display: block;
+  }
+}
