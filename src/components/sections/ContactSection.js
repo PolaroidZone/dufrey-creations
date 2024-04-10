@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
@@ -9,6 +9,7 @@ import "../../styles/contactStyles.css";
 import HomeMap from "../maps/HomeMap";
 
 export default function ContactSection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
 
   const { heading2, heading5, heading4, paragraph } = typography;
@@ -29,6 +30,19 @@ export default function ContactSection() {
       details: address.city + ", " + address.street,
     },
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section
@@ -51,7 +65,7 @@ export default function ContactSection() {
             <h2
               style={{
                 color: colors.primary.main,
-                fontSize: heading2.fontSize,
+                fontSize: !isMobile ? heading2.fontSize : 30,
                 marginBottom: ".6em",
               }}
             >
@@ -60,7 +74,7 @@ export default function ContactSection() {
             <p
               style={{
                 color: colors.primary.main,
-                fontSize: paragraph.fontSize,
+                fontSize: !isMobile ? paragraph.fontSize : 15,
                 textAlign: "left",
               }}
             >
@@ -82,7 +96,7 @@ export default function ContactSection() {
                     <h4
                       style={{
                         color: colors.primary.main,
-                        fontSize: heading4.fontSize,
+                        fontSize: !isMobile ? heading4.fontSize : 20,
                         fontWeight: heading4.fontWeight,
                         marginBottom: 0,
                       }}
