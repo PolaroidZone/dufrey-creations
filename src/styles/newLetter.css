@@ -47,8 +47,19 @@
 
 .news_letter_form input {
   width: 308px;
+  max-width: 308px;
   height: 40px;
   padding-left: 10px;
   margin-right: 10px;
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .news_letter_form input {
+    max-width: 225px;
+    margin-bottom: 1em;
+    transition: ease-in-out 0.5s;
+  }
+  
 }

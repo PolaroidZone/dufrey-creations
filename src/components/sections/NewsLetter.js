@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import DefaultButton from "../buttons/DefaultButton";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
@@ -7,10 +7,24 @@ import sitestrings from "../../assets/data/siteStrings.json";
 import "../../styles/newLetter.css";
 
 export default function NewsLetter() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
   const { heading2, heading5, paragraph } = typography;
 
   const newsLetterStrings = sitestrings.newsLetter;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="news_letter_sectoin">
@@ -18,7 +32,7 @@ export default function NewsLetter() {
         <div className="news_letter_top">
           <h2
             style={{
-              fontSize: heading2.fontSize,
+              fontSize: !isMobile ? heading2.fontSize : 30,
               fontWeight: heading2.fontWeight,
               color: colors.secondary.main,
               textAlign: "center",
@@ -30,7 +44,7 @@ export default function NewsLetter() {
           </h2>
           <p
             style={{
-              fontSize: paragraph.fontSize,
+              fontSize: !isMobile ? paragraph.fontSize : 15,
               fontWeight: paragraph.fontWeight,
               color: colors.secondary.main,
               textAlign: "center",
@@ -43,7 +57,7 @@ export default function NewsLetter() {
         <div className="news_letter_form_container">
           <form className="news_letter_form" method="post">
             <input inputMode="text" placeholder={newsLetterStrings.email} />
-            <DefaultButton text={newsLetterStrings.subscribe}  size={"small"}/>
+            <DefaultButton text={newsLetterStrings.subscribe} size={"small"} />
           </form>
           <div className="news_privacy">
             <h5
