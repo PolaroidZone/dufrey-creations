@@ -1,0 +1,8 @@
+.nav_menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    display: block;
+  }
+}
