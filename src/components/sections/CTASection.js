@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { ThemeContext } from "../../hooks/ThemeContext";
 
@@ -9,10 +9,24 @@ import TransparentButton from "../buttons/TransparentButton";
 import "../../styles/ctastyles.css";
 
 export default function CTASection() {
+  const [isMobile, setIsMobile] = useState(false);
   const { colors, typography } = useContext(ThemeContext);
   const { heading2, paragraph } = typography;
 
   const ctaStrings = siteStrings.ctaSection;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 550);
+    };
+
+    // Check right away (not just on resize)
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="cta_section">
@@ -20,7 +34,7 @@ export default function CTASection() {
         <div className="cta_content">
           <h2
             style={{
-              fontSize: heading2.fontSize,
+              fontSize: !isMobile ? heading2.fontSize : 30,
               fontWeight: heading2.fontWeight,
               color: colors.primary.main,
               marginBottom: ".5em",
@@ -31,7 +45,7 @@ export default function CTASection() {
           </h2>
           <p
             style={{
-              fontSize: paragraph.fontSize,
+              fontSize: !isMobile ? paragraph.fontSize : 15,
               fontweight: paragraph.fontWeight,
               color: colors.primary.main,
               marginBottom: "2em",

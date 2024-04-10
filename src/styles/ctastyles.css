@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   max-width: 1800px;
   padding: 0 20px;
 }
@@ -34,4 +34,11 @@ p {
   justify-content: space-between;
   width: 100%;
   max-width: 420px;
+}
+
+@media screen and (max-width: 1550px) {
+  .cta_container {
+    max-width: 1400px;
+    transition: ease-in-out 0.5s;
+  }
 }
