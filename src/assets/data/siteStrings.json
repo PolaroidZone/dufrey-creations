@@ -1,0 +1,158 @@
+{
+  "header": {
+    "logo": "Dufrey"
+  },
+  "hero": {
+    "title": " Discover the Best Sewing <br /> Machines for You",
+    "subTitle": "Explore our wide selection of high-quality sewing machines and services."
+  },
+  "featureSection": {
+    "title": "Discover the Power and Precision of DuffreyCreations' Sewing Machines",
+    "paragraph": "Experience the ultimate in sewing machine technology with DuffreyCreations. Our machines are designed to deliver exceptional performance and quality.",
+    "list": [
+      {
+        "title": "Reliable",
+        "paragraph": "Our sewing machines are built to last, ensuring years of reliable and efficient operation."
+      },
+      {
+        "title": "Versatile",
+        "paragraph": "From basic stitches to intricate embroidery, our machines offer a wide range of creative possibilities."
+      }
+    ]
+  },
+  "featureListSection": {
+    "list": [
+      {
+        "title": "Quality Sewing Machine Services",
+        "paragraph": "We offer professional sewing machine assembly, repairs, and servicing to meet all your sewing needs."
+      },
+      {
+        "title": "Reliable Sewing Machine Repairs",
+        "paragraph": "Our experienced technicians provide reliable sewing machine repairs to ensure your machine operates at its best."
+      },
+      {
+        "title": "Quality Sewing Machine Services",
+        "paragraph": "With our efficient sewing machine servicing, we help prolong the lifespan of your machine and optimize its performance."
+      }
+    ]
+  },
+  "benefitsSection": {
+    "emphases": "Reliable",
+    "title": "Experience the Best in Sewing Machine Services",
+    "paragraph": "At DuffreyCreations, we pride ourselves on providing reliable and expert sewing machine services. With our extensive experience and knowledge, we guarantee top-notch service and customer satisfaction. Whether you need a sewing machine assembly, repair, or maintenance, we have you covered. Trust us for all your sewing machine needs."
+  },
+  "servicesSection": {
+    "title": "Discover Our Wide Range of Sewing Machine Services",
+    "list": [
+      {
+        "title": "Expert Assembly and Maintenance for Your Sewing Machines",
+        "paragraph": "At DuffreyCreations, we offer comprehensive sewing machine services, including custom assembly and maintenance."
+      },
+      {
+        "title": "Customized Sewing Machine Assembly to Suit Your Needs",
+        "paragraph": "Our skilled team specializes in providing customized sewing machine assembly services tailored to your specific requirements."
+      },
+      {
+        "title": "Reliable Sewing Machine Maintenance for Optimal Performance",
+        "paragraph": "Ensure your sewing machines are always in top condition with our reliable maintenance services, maximizing their performance and longevity."
+      }
+    ]
+  },
+
+  "statsSection": {
+    "title": "Experience the Best in Sewing Machine Services ",
+    "details": "With a wide range of sewing machine services, DuffreyCreations has become a trusted choice for customers seeking quality and reliability.",
+    "list": [
+      {
+        "number": "50%",
+        "label": "Customer satisfaction rate for our top-notch sewing machine services."
+      },
+      {
+        "number": "50%",
+        "label": "Customer satisfaction rate for our top-notch sewing machine services."
+      }
+    ]
+  },
+  "testimonialSection": [
+    {
+      "quote": "I couldn't be happier with the sewing machine I purchased from DuffreyCreations. It's been a game-changer for my business.",
+      "author": "Jane Doe",
+      "type": "Small Business Owner"
+    }
+  ],
+  "ctaSection": {
+    "title": "Discover Our Quality Sewing Machines",
+    "details": "Browse our wide selection of high-performance sewing machines and accessories...",
+    "contact": "Contact",
+    "learnMore": "Learn More"
+  },
+  "newsLetter": {
+    "title": "Stay Updated with Our Newsletter",
+    "details": "Subscribe to our newsletter for the latest sewing machine models and tips.",
+    "email": "your email address",
+    "subscribe": "Join Now",
+    "privacy": "By joining, you agree to our Terms and Conditions."
+  },
+  "contactInfo": {
+    "emphases": "Quality",
+    "title": "Experience the Best in Sewing Machine Services",
+    "details": "Browse our wide selection of high-performance sewing machines and accessories..",
+    "address": {
+      "title": "Office",
+      "street": "1234 Elm St.",
+      "city": "Springfield",
+      "state": "IL",
+      "zip": "62701"
+    },
+
+    "phone": {
+      "title": "Phone",
+      "number": "123-456-7890"
+    },
+    "email": {
+      "title": "Email",
+      "address": "test email"
+    }
+  },
+  "footer": {
+    "navItems": [
+      {
+        "title": "About Us",
+        "link": "#"
+      },
+      {
+        "title": "Services",
+        "link": "#"
+      },
+      {
+        "title": "Contact",
+        "link": "#"
+      },
+      {
+        "title": "FAQs",
+        "link": "#"
+      }
+    ],
+    "T&C": [
+      {
+        "title": "Privacy Policy",
+        "link": "#"
+      },
+      {
+        "title": "Terms and Conditions",
+        "link": "#"
+      },
+      {
+        "title": "Cookies Policy",
+        "link": "#"
+      }
+    ],
+    "logo": "Duffrey",
+    "faqs": "FAQs",
+    "copyRight": "© 2021 DuffreyCreations. All rights reserved.",
+    "social": {
+      "facebook": "https://www.facebook.com/",
+      "linkedin": "https://www.linkedin.com/"
+    }
+  }
+}

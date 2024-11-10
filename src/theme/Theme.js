@@ -1,59 +1,79 @@
-//Create theme for the app
-const Theme = {
-  palette: {
-    primary: {
-      main: "#000000",
-    },
-    secondary: {
-      main: "#ffffff",
-    },
-    primaryLight: {
-      main: "#BEB7A4",
-    },
-    accent: {
-      main: "#CE680F",
-    },
-    tertiary: {
-      main: "#951A1A",
-    },
-  },
-  typography: {
-    fontFamily: "Inter, Roboto, sans-serif",
-    h1: {
-      fontSize: "2rem",
-      fontWeight: 700,
-    },
-    h2: {
-      fontSize: "1.5rem",
-      fontWeight: 700,
-    },
-    h3: {
-      fontSize: "1.17rem",
-      fontWeight: 700,
-    },
-    h4: {
-      fontSize: "1rem",
-      fontWeight: 700,
-    },
-    h5: {
-      fontSize: ".83rem",
-      fontWeight: 700,
-    },
-  },
-  spacing: {
-    padding: {
-      paddingRIght: 10,
-      paddingLeft: 10,
-      paddingTop: 10,
-      paddingBottom: 10,
-    },
-    margin: {
-      marginRight: 10,
-      marginLeft: 10,
-      marginTop: 10,
-      marginBottom: 10,
-    },
-  },
-};
+import { useState, useContext, useEffect } from "react";
 
+const Theme = () => {
+  const Theme = {
+    palette: {
+      primary: {
+        main: "#000000",
+      },
+      secondary: {
+        main: "#ffffff",
+      },
+      primaryLight: {
+        main: "#BEB7A4",
+      },
+      accent: {
+        main: "#CE680F",
+      },
+      tertiary: {
+        main: "#951A1A",
+      },
+    },
+    typography: {
+      fontFamily: "Inter, Roboto, sans-serif",
+      h1: {
+        fontSize: 48,
+        fontWeight: 700,
+        fontWeightMedium: 400,
+      },
+      heading2: {
+        fontSize: 40,
+        fontWeight: 700,
+        fontWeightMedium: 400,
+      },
+      heading3: {
+        fontSize: 36,
+        fontWeight: 700,
+        fontWeightMedium: 400,
+      },
+      heading4: {
+        fontSize: 32,
+        fontWeight: 700,
+        fontWeightMedium: 400,
+      },
+      heading5: {
+        fontSize: 24,
+        fontWeight: 300,
+        fontWeightMedium: 400,
+      },
+      paragraph: {
+        fontSize: "20",
+        fontWeight: 300,
+        fontWeightMedium: 400,
+      },
+    },
+    spacing: {
+      padding: {
+        paddingRIght: 10,
+        paddingLeft: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+      },
+      margin: {
+        marginRight: 10,
+        marginLeft: 10,
+        marginTop: 10,
+        marginBottom: 10,
+      },
+    },
+    breakpoints: {
+      xs: 0,
+      sm: 760,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    },
+  };
+  return Theme;
+};
 export default Theme;
